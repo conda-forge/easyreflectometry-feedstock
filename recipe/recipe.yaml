@@ -24,7 +24,7 @@ requirements:
     - pip
   run:
     - python >=${{ python_min }}
-    - easyscience
+    - easyscience >=2.5.1
     - scipp
     - refnx
     - refl1d >=1.0.0
