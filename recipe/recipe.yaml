@@ -19,8 +19,8 @@ build:
 requirements:
   host:
     - python ${{ python_min }}.*
-    - hatchling <=1.21.0
-    - setuptools-git-versioning
+    - hatchling
+    - versioningit
     - pip
   run:
     - python >=${{ python_min }}
@@ -35,6 +35,8 @@ requirements:
         - svglib <1.6
     - xhtml2pdf
     - bumps
+    - pooch
+    - plotly
 
 tests:
   - python:
@@ -55,3 +57,4 @@ about:
 extra:
   recipe-maintainers:
     - MridulS
+    - conda-forge/easyscience
