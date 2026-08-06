@@ -37,6 +37,8 @@ requirements:
     - bumps
     - pooch
     - plotly
+    # xhtml2pdf seems to complain about this
+    - python-bidi >=0.5.0
 
 tests:
   - python:
