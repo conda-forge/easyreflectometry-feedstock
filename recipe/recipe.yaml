@@ -1,6 +1,6 @@
 context:
   name: easyreflectometry
-  version: 1.5.0
+  version: "1.7.0"
   python_min: "3.11"
 
 package:
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/easyreflectometry-${{ version }}.tar.gz
-  sha256: a7ffd7a2c44a3d50e95c395f6c6aa342baf02d0e0e181a7d53a08ebfeca0cc6d
+  sha256: 8f6556cbcca3f6d32fadb14792257cc40aa79f73514983757b48354808489f5f
 
 build:
   number: 0
@@ -19,12 +19,12 @@ build:
 requirements:
   host:
     - python ${{ python_min }}.*
-    - hatchling <=1.21.0
-    - setuptools-git-versioning
+    - hatchling
+    - versioningit
     - pip
   run:
     - python >=${{ python_min }}
-    - easyscience
+    - easyscience >=2.5.1
     - scipp
     - refnx
     - refl1d >=1.0.0
@@ -35,6 +35,10 @@ requirements:
         - svglib <1.6
     - xhtml2pdf
     - bumps
+    - pooch
+    - plotly
+    # xhtml2pdf seems to complain about this
+    - python-bidi >=0.5.0
 
 tests:
   - python:
@@ -55,3 +59,4 @@ about:
 extra:
   recipe-maintainers:
     - MridulS
+    - conda-forge/easyscience
