@@ -1,14 +1,14 @@
 context:
   name: easyreflectometry
-  version: "1.8.0"
+  version: "2.0.0"
 
 package:
   name: ${{ name|lower }}
   version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/easyreflectometry-${{ version }}.tar.gz
-  sha256: a7bdda2ac40fa9d1b52b103e7debedca6a431eb2d37d940430350b994502267c
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
+  sha256: bbb9726b5362b6ecc70637b4f5a5d1deb9c66407a54190646c12ca1c8ed3a4af
 
 build:
   number: 0
